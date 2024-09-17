@@ -40,6 +40,7 @@ nnoremap <leader>b <C-t>
 
 syntax on
 set relativenumber
+set cursorline
 colorscheme flesh-and-blood
 let g:airline_theme ='jet'
 
@@ -75,3 +76,19 @@ hi cParenError guifg=NONE ctermfg=NONE guibg=NONE ctermbg=NONE
 let g:gutentags_project_root = ['.git', '.hg', '.svn', 'Makefile']
 let g:gutentags_cache_dir = expand('~/.cache/tags')
 let g:gutentags_enabled = 1
+
+highlight LineNr guifg=#FF6666
+highlight CursorLineNr guifg=#FFFF00
+
+hi cJCType guifg=#D8DEE9 ctermfg=244
+hi cJCParamType guifg=#FF4060 ctermfg=Grey "color of param calls inside of function creation"
+hi cJCTypeInDecl guifg=#FF4060 ctermfg=Grey "color of variable types outside of function creation"
+hi cJCTypeCast guifg=#A3BE8C ctermfg=LightGreen
+hi cBrightRedFuncs guifg=#FF6446 ctermfg=LightRed "color of malloc"
+hi cMacro guifg=#EBC88B ctermfg=Yellow "color of macros"
+
+highlight cJCFuncCall guifg=#933D52 ctermfg=132 "color of function calls"
+highlight cJCStructCall guifg=#FF6F61 ctermfg=204 "color of structure calls (struct->y)"
+highlight cConditional guifg=#BF616A ctermfg=Red "color of if/else"
+highlight cRepeat guifg=#BF616A ctermfg=Red "color of while/for"
+highlight cStatement guifg=#BF616A ctermfg=Red "color of return"
